@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Velvet & Bean - Artisan Coffee Roastery & Cafe Menu. Specialty coffee, fresh salads, artisan sandwiches, handmade pastries, and roasted beans. Prices in Israeli Shekels (₪).">
+  <title>Velvet & Bean • Artisan Coffee & Bakery Menu</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo" id="brand-logo">
+        <div class="brand-icon">☕</div>
+        <div>
+          <h1 class="brand-title">VELVET & BEAN</h1>
+          <div class="brand-subtitle">Artisan Roastery & Cafe</div>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <div class="badge-open">
+          <span class="pulse-dot"></span> Open Now • 07:30 - 22:00
+        </div>
+        <button class="btn-cart-toggle" id="cart-toggle-btn" aria-label="Open Cart">
+          <span>🛍️ Basket</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero-section">
+      <div class="container">
+        <div class="hero-tag">Handcrafted & Ethically Sourced</div>
+        <h2 class="hero-title">Experience <span>Artisan Coffee</span> & Fresh Daily Bakery</h2>
+        <p class="hero-description">
+          Explore our seasonal menu featuring single-origin roasts, gourmet salads, sourdough sandwiches, and freshly baked French pastries. All prices in Israeli Shekels (₪).
+        </p>
+
+        <!-- CONTROLS & SEARCH BAR -->
+        <div class="controls-bar">
+          <div class="search-wrapper">
+            <span class="search-icon">🔍</span>
+            <input 
+              type="text" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search espresso, salads, sourdough, pastries, or coffee beans..." 
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- CATEGORY TABS -->
+          <nav class="categories-nav" id="categories-nav" aria-label="Menu Categories">
+            <!-- Dynamically populated by app.js -->
+          </nav>
+
+          <!-- DIETARY FILTERS -->
+          <div class="diet-filters" id="diet-filters" aria-label="Dietary Filters">
+            <!-- Dynamically populated by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU GRID SECTION -->
+    <section class="menu-section container" id="menu-section">
+      <div class="section-header">
+        <h2 class="section-title" id="section-title">Menu</h2>
+        <span class="item-count" id="item-count">Loading items...</span>
+      </div>
+
+      <div class="menu-grid" id="menu-grid">
+        <!-- Dynamically populated by app.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ITEM CUSTOMIZATION MODAL -->
+  <div class="modal-backdrop" id="item-modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="btn-close-modal" id="modal-close" aria-label="Close Modal">✕</button>
+      <img id="modal-img" class="modal-header-img" src="" alt="Menu item preview" />
+      <div class="modal-content">
+        <h3 id="modal-title" class="modal-title">Item Title</h3>
+        <p id="modal-desc" class="modal-desc">Item Description</p>
+        
+        <div id="modal-options">
+          <!-- Dynamic options (milk choices, grind, extra shot, etc.) -->
+        </div>
+
+        <div class="modal-footer">
+          <div class="quantity-control">
+            <button class="btn-qty" id="btn-qty-minus">-</button>
+            <span class="qty-val" id="modal-qty-val">1</span>
+            <button class="btn-qty" id="btn-qty-plus">+</button>
+          </div>
+          <button class="btn-add-to-cart-confirm" id="btn-add-to-cart-confirm">
+            Add to Order • ₪0
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOPPING CART DRAWER -->
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <h3 class="cart-title">Your Basket</h3>
+      <button class="btn-close-cart" id="cart-close" aria-label="Close Cart">✕</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list">
+      <!-- Cart items injected here -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span class="cart-total-price" id="cart-total-price">₪0</span>
+      </div>
+      <button class="btn-checkout" id="btn-checkout">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">VELVET & BEAN</div>
+      <div class="footer-info">
+        📍 42 Rothschild Blvd, Tel Aviv • 📞 +972 3-555-0199<br>
+        Open Daily 07:30 - 22:00
+      </div>
+      <p>&copy; 2026 Velvet & Bean Roastery. Designed for GitHub Pages hosting.</p>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
